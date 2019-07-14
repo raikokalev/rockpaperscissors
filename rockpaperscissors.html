@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+
+    <body>
+        
+        <script>
+
+            function computerPlay(){
+
+                var roll = Math.random();
+
+                if(roll < 0.33){
+                    var result = "Rock"
+                    console.log("Computer picks " + result)
+                    return "Rock";
+                }
+                else if(roll > 0.33 && roll <= 0.66){
+                    var result = "Paper"
+                    console.log("Computer picks " + result)
+                    return "Paper";
+                }
+                else {
+                    var result = "Scissors"
+                    console.log("Computer picks " + result)
+                    return "Scissors";
+                }
+            }
+
+            function playRound(playerSelection, computerSelection){
+
+                playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+
+                if(playerSelection == "Rock"){
+                    if(computerSelection == "Rock"){
+                        return "It is a tie!";
+                    }
+                    else if(computerSelection == "Paper"){
+                        return "Paper beats rock, you lose!";
+                    }
+                    else if(computerSelection == "Scissors"){
+                        return "Rock beats scissors, you win!";
+                    }
+
+                }
+                else if(playerSelection = "Paper"){
+
+
+
+                }
+                else if(playerSelection = "Scissors"){
+
+
+
+                }
+            }
+
+
+        </script>
+
+    </body>
+</html>
